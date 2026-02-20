@@ -5,7 +5,6 @@ import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, 
 const Reports = () => {
   const { leaveRequests, employees } = useAppContext();
 
-  // Leave utilization by type
   const typeData = (['Sick', 'Casual', 'Earned'] as const).map(type => ({
     name: type,
     value: leaveRequests.filter(lr => lr.type === type).length,
@@ -100,8 +99,8 @@ const Reports = () => {
             <ResponsiveContainer width="100%" height={250}>
               <PieChart>
                 <Pie data={approvalData} cx="50%" cy="50%" innerRadius={60} outerRadius={90} dataKey="value" label={({ name, value }) => `${name}: ${value}`}>
-                  <Cell fill="hsl(210, 70%, 50%)" />
-                  <Cell fill="hsl(var(--muted-foreground))" />
+                  <Cell fill="hsl(142, 71%, 45%)" />
+                  <Cell fill="hsl(38, 92%, 50%)" />
                 </Pie>
                 <Tooltip />
               </PieChart>

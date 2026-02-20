@@ -3,13 +3,13 @@ import { Employee, LeaveRequest, Project, Notification } from '@/types/types';
 export const TEAM_SIZE = 8;
 
 export const employees: Employee[] = [
-  { id: 'emp-1', name: 'Alex Johnson', avatar: 'AJ', department: 'Engineering', role: 'Frontend Developer', leaveBalance: { Sick: 10, Casual: 8, Earned: 15 } },
-  { id: 'emp-2', name: 'Sarah Chen', avatar: 'SC', department: 'Engineering', role: 'Backend Developer', leaveBalance: { Sick: 7, Casual: 5, Earned: 12 } },
-  { id: 'emp-3', name: 'Mike Peters', avatar: 'MP', department: 'Design', role: 'UI Designer', leaveBalance: { Sick: 9, Casual: 6, Earned: 14 } },
-  { id: 'emp-4', name: 'Lisa Wang', avatar: 'LW', department: 'Engineering', role: 'DevOps Engineer', leaveBalance: { Sick: 10, Casual: 8, Earned: 15 } },
-  { id: 'emp-5', name: 'David Kim', avatar: 'DK', department: 'Product', role: 'Product Manager', leaveBalance: { Sick: 6, Casual: 4, Earned: 10 } },
-  { id: 'emp-6', name: 'Emma Davis', avatar: 'ED', department: 'Engineering', role: 'QA Engineer', leaveBalance: { Sick: 8, Casual: 7, Earned: 13 } },
-  { id: 'emp-7', name: 'James Wilson', avatar: 'JW', department: 'Design', role: 'UX Researcher', leaveBalance: { Sick: 10, Casual: 8, Earned: 15 } },
+  { id: 'emp-1', name: 'Aayush', avatar: 'AY', department: 'Engineering', role: 'Frontend Developer', leaveBalance: { Sick: 10, Casual: 8, Earned: 15 } },
+  { id: 'emp-2', name: 'Vani Garg', avatar: 'VG', department: 'Engineering', role: 'Backend Developer', leaveBalance: { Sick: 7, Casual: 5, Earned: 12 } },
+  { id: 'emp-3', name: 'Vivan', avatar: 'VA', department: 'Design', role: 'UI Designer', leaveBalance: { Sick: 9, Casual: 6, Earned: 14 } },
+  { id: 'emp-4', name: 'Shaurya', avatar: 'SR', department: 'Engineering', role: 'DevOps Engineer', leaveBalance: { Sick: 10, Casual: 8, Earned: 15 } },
+  { id: 'emp-5', name: 'Ankit', avatar: 'AN', department: 'Product', role: 'Product Manager', leaveBalance: { Sick: 6, Casual: 4, Earned: 10 } },
+  { id: 'emp-6', name: 'Rohan', avatar: 'RH', department: 'Engineering', role: 'QA Engineer', leaveBalance: { Sick: 8, Casual: 7, Earned: 13 } },
+  { id: 'emp-7', name: 'Arjun', avatar: 'AJ', department: 'Design', role: 'UX Researcher', leaveBalance: { Sick: 10, Casual: 8, Earned: 15 } },
   { id: 'emp-8', name: 'Priya Patel', avatar: 'PP', department: 'Engineering', role: 'Full Stack Developer', leaveBalance: { Sick: 5, Casual: 3, Earned: 11 } },
 ];
 

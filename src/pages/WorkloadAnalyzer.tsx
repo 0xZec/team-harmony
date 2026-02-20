@@ -9,9 +9,8 @@ import { AlertTriangle } from 'lucide-react';
 
 const WorkloadAnalyzer = () => {
   const { leaveRequests, employees } = useAppContext();
-  const today = new Date(2026, 1, 20); // Feb 20, 2026
+  const today = new Date(2026, 1, 20);
 
-  // Daily capacity for next 14 days
   const capacityData = Array.from({ length: 14 }).map((_, i) => {
     const day = addDays(today, i);
     const dateStr = format(day, 'yyyy-MM-dd');
@@ -29,7 +28,6 @@ const WorkloadAnalyzer = () => {
     };
   });
 
-  // Heatmap: weekly view (4 weeks, 7 days)
   const weekStart = startOfWeek(today);
   const heatmapWeeks = Array.from({ length: 4 }).map((_, w) => {
     const weekDays = eachDayOfInterval({
@@ -54,7 +52,6 @@ const WorkloadAnalyzer = () => {
     return 'bg-red-200';
   };
 
-  // Deadline overlaps
   const deadlineOverlaps = projects.filter(p => {
     const pendingNear = getOverlappingLeaves(
       leaveRequests.filter(lr => lr.status === 'Pending'),
@@ -71,7 +68,6 @@ const WorkloadAnalyzer = () => {
         <p className="text-muted-foreground">Team capacity and impact visualization</p>
       </div>
 
-      {/* Deadline Overlap Warnings */}
       {deadlineOverlaps.length > 0 && (
         <Card className="border-amber-200 bg-amber-50">
           <CardContent className="pt-4">
@@ -90,7 +86,6 @@ const WorkloadAnalyzer = () => {
         </Card>
       )}
 
-      {/* Capacity Chart */}
       <Card>
         <CardHeader><CardTitle>Team Capacity — Next 14 Days</CardTitle></CardHeader>
         <CardContent>
@@ -113,7 +108,6 @@ const WorkloadAnalyzer = () => {
         </CardContent>
       </Card>
 
-      {/* Heatmap */}
       <Card>
         <CardHeader><CardTitle>Weekly Availability Heatmap</CardTitle></CardHeader>
         <CardContent>

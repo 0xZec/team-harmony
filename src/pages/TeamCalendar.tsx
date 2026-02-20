@@ -11,12 +11,12 @@ import { TEAM_SIZE } from '@/data/mockData';
 
 const TeamCalendar = () => {
   const { leaveRequests, employees } = useAppContext();
-  const [currentMonth, setCurrentMonth] = useState(new Date(2026, 1)); // Feb 2026
+  const [currentMonth, setCurrentMonth] = useState(new Date(2026, 1));
 
   const monthStart = startOfMonth(currentMonth);
   const monthEnd = endOfMonth(currentMonth);
   const days = eachDayOfInterval({ start: monthStart, end: monthEnd });
-  const startPad = getDay(monthStart); // 0=Sun
+  const startPad = getDay(monthStart);
 
   const approvedLeaves = leaveRequests.filter(lr => lr.status !== 'Rejected');
 
@@ -101,7 +101,6 @@ const TeamCalendar = () => {
         </CardContent>
       </Card>
 
-      {/* Legend */}
       <div className="flex items-center gap-4 text-sm text-muted-foreground">
         <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-emerald-500" /> Approved</span>
         <span className="flex items-center gap-1"><span className="h-3 w-3 rounded bg-amber-500" /> Pending</span>

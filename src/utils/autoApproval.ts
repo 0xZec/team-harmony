@@ -29,13 +29,11 @@ export function evaluateAutoApproval(
   allProjects: Project[],
   teamSize: number
 ): AutoApprovalResult {
-  // Rule 1: Team capacity >= 70%
   const overlapping = getOverlappingLeaves(allRequests, request.startDate, request.endDate, request.id);
-  const onLeaveCount = overlapping.length + 1; // +1 for current request
+  const onLeaveCount = overlapping.length + 1;
   const capacityDuringLeave = ((teamSize - onLeaveCount) / teamSize) * 100;
   const capacityOk = capacityDuringLeave >= 70;
 
-  // Rule 2: No deadlines within 3 days
   const reqStart = parseISO(request.startDate);
   const reqEnd = parseISO(request.endDate);
   const conflictingDeadlines = allProjects.filter(p => {
@@ -46,7 +44,6 @@ export function evaluateAutoApproval(
   });
   const noDeadlineConflict = conflictingDeadlines.length === 0;
 
-  // Rule 3: Sufficient balance
   const days = countLeaveDays(request.startDate, request.endDate);
   const sufficientBalance = employee.leaveBalance[request.type] >= days;
 

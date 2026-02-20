@@ -33,7 +33,7 @@ export function AppSidebar() {
             <CalendarDays className="h-4 w-4 text-primary-foreground" />
           </div>
           <div>
-            <h2 className="text-sm font-semibold text-sidebar-foreground">LeaveFlow</h2>
+            <h2 className="text-sm font-semibold text-sidebar-foreground">Chutti Chahiye?</h2>
             <p className="text-xs text-muted-foreground capitalize">{role} View</p>
           </div>
         </div>

@@ -22,7 +22,7 @@ export function AppLayout({ children }: AppLayoutProps) {
           <header className="h-14 border-b flex items-center justify-between px-4 bg-background">
             <div className="flex items-center gap-2">
               <SidebarTrigger />
-              <h1 className="text-lg font-semibold text-foreground">LeaveFlow</h1>
+              <h1 className="text-lg font-semibold text-foreground">Chutti Chahiye?</h1>
             </div>
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
