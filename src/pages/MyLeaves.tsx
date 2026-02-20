@@ -65,7 +65,7 @@ const MyLeaves = () => {
         ))}
       </div>
 
-      {/* History */}
+      {}
       <Card>
         <CardHeader><CardTitle>Leave History</CardTitle></CardHeader>
         <CardContent>
@@ -96,7 +96,7 @@ const MyLeaves = () => {
         </CardContent>
       </Card>
 
-      {/* Leave Request Dialog */}
+      {}
       <Dialog open={showForm} onOpenChange={setShowForm}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader><DialogTitle>Request Leave</DialogTitle></DialogHeader>

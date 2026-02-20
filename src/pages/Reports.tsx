@@ -28,7 +28,6 @@ const Reports = () => {
     return { department: dept, total, approved, pending };
   });
 
-  // Auto-approval stats (mock)
   const autoApproved = leaveRequests.filter(lr => lr.status === 'Approved').length;
   const manualReview = leaveRequests.filter(lr => lr.status === 'Pending' || lr.status === 'Rejected').length;
   const approvalData = [
