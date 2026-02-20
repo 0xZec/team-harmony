@@ -41,7 +41,7 @@ const TeamCalendar = () => {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-2xl font-bold text-foreground">Team Calendar</h1>
+        <h1 className="text-2xl font-bold text-foreground">Calendar</h1>
         <p className="text-muted-foreground">View team leave schedules and project milestones</p>
       </div>
 

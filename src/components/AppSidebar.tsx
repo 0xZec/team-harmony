@@ -16,7 +16,7 @@ import {
 const navItems = [
   { title: 'Dashboard', url: '/', icon: LayoutDashboard },
   { title: 'My Leaves', url: '/my-leaves', icon: Palmtree },
-  { title: 'Team Calendar', url: '/team-calendar', icon: CalendarDays },
+  { title: 'Calendar', url: '/team-calendar', icon: CalendarDays },
   { title: 'Project Deadlines', url: '/project-deadlines', icon: FolderKanban },
   { title: 'Workload Analyzer', url: '/workload', icon: BarChart3 },
   { title: 'Reports', url: '/reports', icon: FileText },
